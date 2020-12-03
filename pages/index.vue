@@ -1,10 +1,9 @@
 <template>
-  <div class="container">
+  <div></div>
+  <!-- <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        kcloud-powerapps-code
-      </h1>
+      <h1 class="title">kcloud-powerapps-code</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -24,11 +23,21 @@
         </a>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
-export default {}
+export default {
+  mounted(){
+    this.movePowerApps();
+  },
+  methods:{
+    movePowerApps() {
+      const url = 'https://apps.powerapps.com/play/fc13877c-4a28-4dc8-8d85-fbccc7861339?tenantId=65e49381-bb52-4f23-b50f-9fcab2c7e7db&hidenavBar=true';
+      window.location.href = url;
+    }
+  }
+}
 </script>
 
 <style>
@@ -42,16 +51,8 @@ export default {}
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
