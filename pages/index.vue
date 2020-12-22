@@ -33,7 +33,13 @@ export default {
   },
   methods:{
     movePowerApps() {
-      const url = 'https://apps.powerapps.com/play/fc13877c-4a28-4dc8-8d85-fbccc7861339?tenantId=65e49381-bb52-4f23-b50f-9fcab2c7e7db&hidenavBar=true';
+      const param = this.$route.query
+      console.log(param)
+      const url_get = jQuery.param( param );
+      let url = 'https://apps.powerapps.com/play/fc13877c-4a28-4dc8-8d85-fbccc7861339?tenantId=65e49381-bb52-4f23-b50f-9fcab2c7e7db&hidenavBar=true'
+      if (url_get != "") {
+        url = url + '?' + url_get
+      }
       window.location.href = url;
     }
   }
