@@ -35,7 +35,7 @@ export default {
     movePowerApps() {
       const param = this.$route.query
       console.log(param)
-        let url = 'https://apps.powerapps.com/play/fc13877c-4a28-4dc8-8d85-fbccc7861339?tenantId=65e49381-bb52-4f23-b50f-9fcab2c7e7db'
+        let url = 'https://apps.powerapps.com/play/fc13877c-4a28-4dc8-8d85-fbccc7861339?tenantId=65e49381-bb52-4f23-b50f-9fcab2c7e7db&hidenavBar=true'
       // if (!param["hidenavBar"]) {
       //   url = url + '&hidenavBar=true'
       //   delete param["hidenavBar"]
