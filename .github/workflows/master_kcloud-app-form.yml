@@ -11,7 +11,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@master
@@ -19,7 +19,7 @@ jobs:
     - name: Set up Node.js version
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '14.x'
 
     - name: npm install, build, and test
       run: |
@@ -32,5 +32,5 @@ jobs:
       with:
         app-name: 'kcloud-app-form'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0559bc9ce7914970a71c01a69043440b }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a9c02462b9be44ad957b9e72a916176c }}
         package: .
